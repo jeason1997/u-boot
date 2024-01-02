@@ -1202,11 +1202,12 @@ int yychar;
 /* The semantic value of the lookahead symbol.  */
 YYSTYPE yylval;
 /* Location data for the lookahead symbol.  */
-YYLTYPE yylloc
-# if defined YYLTYPE_IS_TRIVIAL && YYLTYPE_IS_TRIVIAL
-  = { 1, 1, 1, 1 }
-# endif
-;
+/* Annotated by Jiang Lin on May 29, 2023, reason: Multiple variables are defined repeatedly */
+// YYLTYPE yylloc
+// # if defined YYLTYPE_IS_TRIVIAL && YYLTYPE_IS_TRIVIAL
+//   = { 1, 1, 1, 1 }
+// # endif
+// ;
 /* Number of syntax errors so far.  */
 int yynerrs;
 
